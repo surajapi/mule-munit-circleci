@@ -33,7 +33,7 @@
 					<environment>Sandbox</environment>
 					<workers>1</workers>
 					<workerType>Micro</workerType>
-					<applicationName>Mule-CICD-API</applicationName>
+					<applicationName>mule-munit-circleci-api</applicationName>
 					<muleVersion>4.2.0</muleVersion>
 				</cloudHubDeployment>
 				</configuration>
