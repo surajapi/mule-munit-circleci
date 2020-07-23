@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="578c2ed9-9cff-4d3c-864e-84da6d91fc81" >
+		<http:listener-connection host="0.0.0.0" port="8084" />
+	</http:listener-config>
+	<flow name="mule-munit-circleci-apiFlow" doc:id="64be7645-cec6-4fa2-95bf-91d5d1290239" >
+		<http:listener doc:name="Listener" doc:id="cfa430a3-5494-40b6-9c3f-6ad855fe7802" config-ref="HTTP_Listener_config" path="/circleci"/>
+		<set-payload value="Hello World!!!" doc:name="Set Payload" doc:id="cd066468-7aff-47e1-b631-0c37bf96a5c1" />
+		<logger level="INFO" doc:name="Logger" doc:id="f8f248b7-2b60-4583-a8fe-85bef10f858c" message="End of Flow"/>
+	</flow>
+</mule>

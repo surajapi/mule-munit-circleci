@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="mule-munit-circleci-api-test-suite.xml" />
+	<munit:test name="mule-munit-circleci-api-test-suite-mule-munit-circleci-apiFlowTest" description="Test" doc:id="c51b8ef6-b110-49a6-9c09-a0d6ab9a47da" >
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to mule-munit-circleci-apiFlow" doc:id="4b589558-d3a2-4b3a-9295-2fdfcb26b792" name="mule-munit-circleci-apiFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="0757753f-a6ac-4e48-8f9c-baf7e1c76467" expression="#[payload]" is="#[MunitTools::notNullValue()]" message="Payload is Null"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
