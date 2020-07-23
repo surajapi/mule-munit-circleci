@@ -32,10 +32,10 @@
 					<password>Suraj@123</password>
 					<environment>Sandbox</environment>
 					<workers>1</workers>
+					<objectStoreV2>true</objectStoreV2>
 					<workerType>Micro</workerType>
 					<applicationName>mule-munit-cicd-api</applicationName>
-					<objectStoreV2>true</objectStoreV2>
-					<muleVersion>4.3.0</muleVersion>
+					<muleVersion>4.2.0</muleVersion>
 				</cloudHubDeployment>
 				</configuration>
 			</plugin>
