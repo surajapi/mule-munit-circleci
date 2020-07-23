@@ -31,9 +31,5 @@ workflows:
             - build
       - deploy:
           requires:
-<<<<<<< HEAD
-            - test       
-       
-=======
-            - test
->>>>>>> be78993c44d11b336772a78f890a9c6997e1028a
+            - test 
+
