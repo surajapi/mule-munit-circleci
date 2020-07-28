@@ -28,9 +28,9 @@
 				<configuration>
 					<cloudHubDeployment>
 					<uri>https://anypoint.mulesoft.com/</uri>
-					<username>surajsejwal001</username>
-					<password>Suraj@123</password>
-					<environment>Sandbox</environment>
+					<username>${username}</username>
+					<password>${password}</password>
+					<environment>${environment}</environment>
 					<workers>1</workers>
 					<workerType>Micro</workerType>
 					<applicationName>mule-munit-circleci-api</applicationName>

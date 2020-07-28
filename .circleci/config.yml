@@ -19,7 +19,7 @@ jobs:
       - image: circleci/openjdk:8-jdk-stretch
     steps:
       - checkout
-      - run: mvn deploy -DmuleDeploy
+      - run: mvn deploy -DmuleDeploy -Dusername=$username -Dpassword=$password -Denvironment=$environment
 
 # Orchestrate our job run sequence
 workflows:
