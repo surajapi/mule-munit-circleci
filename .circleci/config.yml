@@ -12,7 +12,7 @@ jobs:
             - maven-repo-v1-{{ .Branch }}-{{ checksum "pom.xml" }}
       - run: mvn clean package -DskipMunitTests
       - save_cache:
-          path: 
+          paths: 
             - ~/.m2
           keys: 
             - maven-repo-v1-{{ .Branch }}-{{ checksum "pom.xml" }}
