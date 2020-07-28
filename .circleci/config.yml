@@ -7,7 +7,15 @@ jobs:
       - image: circleci/openjdk:8-jdk-stretch
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - maven-repo-v1-{{ .Branch }}-{{ checksum "pom.xml" }}
       - run: mvn clean package -DskipMunitTests
+      - save_cache:
+          path: 
+            - ~/.m2
+          keys: 
+            - maven-repo-v1-{{ .Branch }}-{{ checksum "pom.xml" }}
   test: 
     docker:
       - image: circleci/openjdk:8-jdk-stretch
